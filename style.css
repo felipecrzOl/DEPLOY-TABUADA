@@ -1,0 +1,137 @@
+/* Reset do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 3rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    color: #34443a;
+    background-color: #f7f8f4;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    margin-bottom: 0.35rem;
+    color: #496453;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    text-align: center;
+    letter-spacing: -0.04em;
+}
+
+h1::before {
+    content: "🐸 ";
+    font-size: 0.8em;
+}
+
+label {
+    color: #59695c;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+input {
+    width: min(100%, 20rem);
+    min-height: 2.9rem;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #d8ded5;
+    border-radius: 0.6rem;
+    outline: none;
+    color: #34443a;
+    background-color: #fff;
+    font: inherit;
+    box-shadow: 0 1px 3px rgb(52 68 58 / 4%);
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+input::placeholder {
+    color: #a0ada0;
+}
+
+input:focus {
+    border-color: #86a987;
+    box-shadow: 0 0 0 3px rgb(134 169 135 / 18%);
+}
+
+button {
+    min-height: 2.9rem;
+    padding: 0.7rem 1.25rem;
+    border: 0;
+    border-radius: 0.6rem;
+    color: #fff;
+    background-color: #718e73;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgb(52 68 58 / 10%);
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+button:hover {
+    background-color: #5d795f;
+    transform: translateY(-1px);
+}
+
+button:focus-visible {
+    outline: 3px solid #b7cdb1;
+    outline-offset: 3px;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#resultado-aqui {
+    width: min(100%, 24rem);
+    min-height: 5rem;
+    margin-top: 0.75rem;
+    padding: 1.25rem;
+    border: 1px solid #e1e6de;
+    border-radius: 0.75rem;
+    background-color: #fff;
+    box-shadow: 0 3px 12px rgb(52 68 58 / 4%);
+}
+
+#resultado-aqui h2 {
+    margin-bottom: 0.75rem;
+    color: #496453;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#resultado-aqui p {
+    padding: 0.45rem 0.6rem;
+    border-bottom: 1px solid #edf1e9;
+    color: #59695c;
+    text-align: center;
+}
+
+#resultado-aqui p:last-child {
+    border-bottom: 0;
+}
+
+@media (max-width: 24rem) {
+    body {
+        padding: 2rem 1rem;
+    }
+
+    #resultado-aqui {
+        padding: 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
